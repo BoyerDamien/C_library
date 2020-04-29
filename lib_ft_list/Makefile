@@ -6,7 +6,7 @@
 #    By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/13 18:42:28 by dboyer            #+#    #+#              #
-#    Updated: 2020/04/29 20:53:45 by dboyer           ###   ########.fr        #
+#    Updated: 2020/04/29 21:28:04 by dboyer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,4 +46,4 @@ fclean	:	clean
 
 re		:	fclean all
 
-.PHONY	: all clean fclean re bonus
+.PHONY	: all clean fclean re
