@@ -6,11 +6,11 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/29 20:45:45 by dboyer            #+#    #+#             */
-/*   Updated: 2020/04/29 21:06:09 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/05 10:48:54 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_list.h"
+#include "ft_list.h"
 
 t_element   *ft_search(t_element *element, int (*f)(t_element *element))
 {

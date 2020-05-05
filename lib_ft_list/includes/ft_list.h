@@ -6,7 +6,7 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 15:32:33 by dboyer            #+#    #+#             */
-/*   Updated: 2020/04/29 21:17:03 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/05 10:53:13 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #	include <stdlib.h>
 #	include <unistd.h>
 #	include <stdarg.h>
-#   include <stdio.h>
 
 
 typedef struct		s_element
@@ -37,7 +36,7 @@ typedef struct		s_list
 	void (*remove)(struct s_list*, t_element*);
 	void (*iter)(t_element*, void (*f)(t_element*));
 
-	struct s_list (*concat)(struct s_list*, struct s_list);
+	struct s_list (*concat)(struct s_list*, struct s_list*);
 	struct s_list (*copy)(struct s_list*);
 	struct s_list (*map)(struct s_list*, void *(*f)(t_element*));
 
@@ -55,7 +54,7 @@ t_element			*ft_new_element(void *content);
 t_element			*ft_get_list_element(t_list *list, int index) __attribute__((const));
 
 t_list				ft_list(void);
-t_list				ft_concat(t_list *list1, t_list list2);
+t_list				ft_concat(t_list *list1, t_list *list2);
 t_list				ft_list_copy(t_list *list);
 
 #	endif

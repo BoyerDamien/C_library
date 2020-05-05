@@ -6,7 +6,7 @@
 #    By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/13 18:42:28 by dboyer            #+#    #+#              #
-#    Updated: 2020/04/29 21:28:04 by dboyer           ###   ########.fr        #
+#    Updated: 2020/05/05 10:55:17 by dboyer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,10 @@ SRCS 	=	srcs/ft_add_back.c\
 
 OBJS 	=	$(SRCS:.c=.o)
 
-CFLAGS 	= -Werror -Wall -Wextra -O3
+
+HEADERS = ./includes/
+
+CFLAGS 	= -Werror -Wall -Wextra -O3 -I${HEADERS}
 
 CC 		= clang
 
@@ -33,13 +36,18 @@ CLEAN = clean
 
 RM	=	rm -f
 
+INCS = ./includes/ft_list.h
+
+%.o: %.c ${INCS}
+	$(CC) $(CFLAGS) -c $< -o $@
+
 $(NAME)	: $(OBJS)
 		ar rc $(NAME) $(OBJS)
 
 all		:	$(NAME)
 
 clean	:
-		$(RM) $(OBJS) $(BON_OBJS)
+		$(RM) $(OBJS)
 
 fclean	:	clean
 		$(RM) $(NAME)

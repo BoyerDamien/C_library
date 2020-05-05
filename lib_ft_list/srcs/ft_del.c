@@ -6,11 +6,11 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 11:58:08 by dboyer            #+#    #+#             */
-/*   Updated: 2020/04/29 21:02:42 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/05 10:48:54 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_list.h"
+#include "ft_list.h"
 
 static inline void	correct_index(t_element *element)
 {
