@@ -6,7 +6,7 @@
 #    By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/13 18:42:28 by dboyer            #+#    #+#              #
-#    Updated: 2020/05/05 10:55:17 by dboyer           ###   ########.fr        #
+#    Updated: 2020/05/08 16:20:19 by dboyer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCS 	=	srcs/ft_add_back.c\
 			srcs/ft_new_element.c\
 			srcs/ft_get_list_element.c\
 			srcs/ft_search.c\
+			srcs/ft_list_iter_inv.c\
 
 OBJS 	=	$(SRCS:.c=.o)
 
@@ -31,8 +32,6 @@ HEADERS = ./includes/
 CFLAGS 	= -Werror -Wall -Wextra -O3 -I${HEADERS}
 
 CC 		= clang
-
-CLEAN = clean
 
 RM	=	rm -f
 

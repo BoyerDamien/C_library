@@ -6,7 +6,7 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 15:32:33 by dboyer            #+#    #+#             */
-/*   Updated: 2020/05/05 10:53:13 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/08 16:20:04 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct		s_list
 	void (*clear)(struct s_list*);
 	void (*remove)(struct s_list*, t_element*);
 	void (*iter)(t_element*, void (*f)(t_element*));
+	void (*iter_inv)(t_element*, void (*f)(t_element*));
 
 	struct s_list (*concat)(struct s_list*, struct s_list*);
 	struct s_list (*copy)(struct s_list*);
@@ -48,6 +49,7 @@ void				ft_add_back(t_list *list, void *content);
 void				ft_del(t_list *list, t_element *element);
 void				ft_clear(t_list *list) __attribute__((hot));
 void				ft_list_iter(t_element *element, void (*f)(t_element *element)) __attribute__((hot));
+void				ft_list_iter_inv(t_element *element, void (*f)(t_element *element)) __attribute__((hot));
 
 t_element			*ft_search(t_element *element, int (*f)(t_element *element)) __attribute__((const));
 t_element			*ft_new_element(void *content);
