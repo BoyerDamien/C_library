@@ -85,6 +85,7 @@ SRCS 	=	srcs/ft_atoi.c\
 			srcs/ft_print_space_before.c\
 			srcs/ft_print_space_after.c\
 			srcs/ft_print_zero_padding.c\
+			srcs/get_next_line.c\
 
 OBJS 	=	$(SRCS:.c=.o)
 

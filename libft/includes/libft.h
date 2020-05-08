@@ -6,7 +6,7 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 15:32:33 by dboyer            #+#    #+#             */
-/*   Updated: 2020/05/08 17:42:58 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/08 18:59:21 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #	include <stdlib.h>
 #	include <unistd.h>
 #	include <stdarg.h>
+#	include <fcntl.h>
 #	include "libft_objects.h"
 #	define CONVERTER "cspdiuxX%"
 
@@ -47,7 +48,7 @@ int					ft_print_space_before(t_format format);
 int					ft_print_space_after(t_format format);
 int					ft_print_zero_padding(t_format format);
 int					ft_printf(const char *str, ...);
-
+int					get_next_line(int fd, char **line);
 size_t				ft_strlen(const char *str);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
