@@ -6,13 +6,13 @@
 /*   By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/27 13:10:01 by dboyer            #+#    #+#             */
-/*   Updated: 2020/05/08 17:31:06 by dboyer           ###   ########.fr       */
+/*   Updated: 2020/05/08 17:53:23 by dboyer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_print_zero_padding(t_format format)
+inline int	ft_print_zero_padding(t_format format)
 {
 	int i;
 	int j;
