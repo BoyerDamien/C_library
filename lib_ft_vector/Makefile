@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ft_vector.a
+NAME	=	libftvector.a
  
 SRCS 	=	srcs/ft_vector.c\
 			srcs/ft_vec_add.c\
