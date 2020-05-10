@@ -6,11 +6,11 @@
 #    By: dboyer <dboyer@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/13 18:42:28 by dboyer            #+#    #+#              #
-#    Updated: 2020/05/08 16:20:19 by dboyer           ###   ########.fr        #
+#    Updated: 2020/05/02 17:33:07 by dboyer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ft_list.a
+NAME	=	libftlist.a
  
 SRCS 	=	srcs/ft_add_back.c\
 			srcs/ft_clear.c\
@@ -22,23 +22,16 @@ SRCS 	=	srcs/ft_add_back.c\
 			srcs/ft_new_element.c\
 			srcs/ft_get_list_element.c\
 			srcs/ft_search.c\
-			srcs/ft_list_iter_inv.c\
 
 OBJS 	=	$(SRCS:.c=.o)
 
-
-HEADERS = ./includes/
-
-CFLAGS 	= -Werror -Wall -Wextra -O3 -I${HEADERS}
+CFLAGS 	= -Werror -Wall -Wextra -O3
 
 CC 		= clang
 
+CLEAN = clean
+
 RM	=	rm -f
-
-INCS = ./includes/ft_list.h
-
-%.o: %.c ${INCS}
-	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME)	: $(OBJS)
 		ar rc $(NAME) $(OBJS)
@@ -46,7 +39,7 @@ $(NAME)	: $(OBJS)
 all		:	$(NAME)
 
 clean	:
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(BON_OBJS)
 
 fclean	:	clean
 		$(RM) $(NAME)
